@@ -2,7 +2,8 @@
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
   "cli": {
-    "packageManager": "npm"
+    "packageManager": "npm",
+    "analytics": "e05540e3-2f1d-4954-8db0-dafb3c64317b"
   },
   "newProjectRoot": "projects",
   "projects": {
@@ -24,7 +25,14 @@
                 "input": "public"
               }
             ],
+            "scripts": [
+              "./node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "./node_modules/bootstrap/dist/js/bootstrap.min.js",
+              "./node_modules/jquery/dist/jquery.min.js"
+            ],
             "styles": [
+              "./node_modules/bootstrap/dist/css/bootstrap.css",
+              "src/material-theme.scss",
               "src/styles.css"
             ]
           },
