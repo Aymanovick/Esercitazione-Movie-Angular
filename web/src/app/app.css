@@ -1,0 +1,13 @@
+* {
+ color: #464c52;
+ box-sizing: border-box;
+}
+
+#headerBackground {
+background: url('C:/Users/husse/Desktop/EnAngular2/web/src/assets/img/netflix-background.jpg') center;
+ background-size: cover;
+ opacity: 0.9;
+ margin: 0;
+ height: 35vh;
+ width: 100%;
+}
