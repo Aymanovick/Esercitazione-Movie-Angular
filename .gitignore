@@ -1,0 +1,122 @@
+# Dipendenze
+node_modules/
+vendor/
+packages/
+*.gem
+*.gemfile.lock
+
+# File di build
+dist/
+build/
+*.exe
+*.dll
+*.so
+*.dylib
+*.class
+*.o
+*.obj
+
+# File di log e database
+*.log
+*.sql
+*.sqlite
+*.db
+*.sqlite3
+
+# File di ambiente e configurazione
+.env
+.env.local
+.env.*.local
+*.config.js
+*.config.ts
+*.env
+*.pem
+*.key
+*.crt
+
+# IDE e editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+*.iml
+.project
+.classpath
+.settings/
+
+# File di test e coverage
+coverage/
+.nyc_output/
+*.lcov
+*.lcov.info
+*.test.js
+*.spec.js
+
+# Cache
+.cache/
+.temp/
+*.tsbuildinfo
+.eslintcache
+.stylelintcache
+
+# Package manager
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+composer.lock
+Gemfile.lock
+
+# File temporanei
+*.tmp
+*.temp
+*.bak
+*.orig
+
+# Documentazione
+docs/_build/
+site/
+*.rdb
+*.rdbms
+
+# File specifici per framework
+## Laravel
+/bootstrap/cache/*
+/storage/*.key
+/storage/logs/*
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/views/*
+
+## Django
+*.pyc
+__pycache__/
+*.pyo
+db.sqlite3
+/media/
+/static/
+
+## React/Angular/Vue
+/node_modules/
+/build/
+/dist/
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+## Docker
+*.pid
+docker-compose.override.yml
+.dockerignore
+
+# File di sistema
+*.swp
+*.swo
+*.*~
+*.lock
+*.pid
+*.seed
+*.pid.lock
