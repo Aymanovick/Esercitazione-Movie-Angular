@@ -3,10 +3,11 @@ import { Movie } from '../../../models/Movie';
 import { MovieApi } from './service/movie-api';
 import { Subscription } from 'rxjs';
 import { HttpErrorResponse } from '@angular/common/http';
+import { MovieItem } from '../movie-item/movie-item';
 
 @Component({
   selector: 'app-movie-list',
-  imports: [],
+  imports: [MovieItem],
   templateUrl: './movie-list.html',
   styleUrl: './movie-list.css',
 })

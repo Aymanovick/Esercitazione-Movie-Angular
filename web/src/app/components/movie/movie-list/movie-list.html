@@ -1,11 +1,16 @@
 <div class="row">
- <div class="col-12">
- <div id="movies" class="shadow p-4 rounded">
- <div class="d-flex flex-wrap justify-content-between">
- <h2 class="fw-bold">Film</h2>
- </div>
- <hr />
- <!-- movie-item -->
- </div>
- </div>
+    <div class="col-12">
+        <div id="movies" class="shadow p-4 rounded">
+            <div class="d-flex flex-wrap justify-content-between">
+                <h2 class="fw-bold">Film</h2>
+            </div>
+            <div class="movie-container">
+                @for(movie of movieList; track $index){
+                    <app-movie-item [movie]="movie"></app-movie-item>
+                }@empty {
+                    <p>No movies found</p>
+                }
+            </div>
+        </div>
+    </div>
 </div>
