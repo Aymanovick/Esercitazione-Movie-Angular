@@ -1,6 +1,7 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Movie } from '../../../../models/Movie';
+import { StremingChannel } from '../../../../models/StreamingChannel';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -19,5 +20,11 @@ export class MovieApi {
 
   deleteMovie(movieId: number): Observable<Movie> {
     return this.http.delete<Movie>(`${this.API_URL}/movies/${movieId}/`)
+  }
+
+  getChannelList(): Observable<StremingChannel[]> {
+    return this.http.get<StremingChannel[]>(
+    `${this.API_URL}/movies/channels/`
+    )
   }
 }
