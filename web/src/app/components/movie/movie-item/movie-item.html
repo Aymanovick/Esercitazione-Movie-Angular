@@ -1,6 +1,24 @@
 <div class="card d-flex w-100">
     <div class="card-body">
         <h3 class="card-title">{{ movie().title }}</h3>
-            <p class="card-text text-break">{{ movie().description }}</p>
+            <!-- Dropdown section -->
+            <div class="dropdown">
+                <button
+                    class="btn"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <span class="fa-solid fa-ellipsis-vertical"></span>
+                </button>
+                <ul class="dropdown-menu">
+                    <li>
+                        <button (click)="deleteMovie()" class="dropdown-item" href="#">
+                            <span class="fa-solid fa-trash"></span>
+                            Delete
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        <p class="card-text text-break">{{ movie().description }}</p>
     </div>
 </div>

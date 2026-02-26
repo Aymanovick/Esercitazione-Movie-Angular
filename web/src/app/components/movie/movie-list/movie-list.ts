@@ -35,7 +35,23 @@ export class MovieList implements OnInit, OnDestroy {
       })
     );
   }
+
   ngOnDestroy(): void {
     this.subscription.unsubscribe();
+  }
+
+  onDeleteMovie(movieId: number): void {
+    this.subscription.add(
+      this.api.deleteMovie(movieId).subscribe({
+        error: (e: HttpErrorResponse) => {
+        throw Error(
+          `Cannot connect to API: Error: ${e.status} - ${e.message}`
+        );
+        },
+        complete: () => {
+          this.onGetMovieList();
+        }
+      })
+    );
   }
 }
