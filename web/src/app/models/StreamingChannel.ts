@@ -1,4 +1,4 @@
-export interface StremingChannel {
+export interface StreamingChannel {
  id: number,
  name: string,
 }

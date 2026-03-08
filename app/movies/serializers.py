@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from movies.models import Movie, StreamingChannel
+from movies.models import Movie, Platform
 
 __all__ = ["MovieSerializer",
            "StreamingChannelSerializer"]
@@ -11,7 +11,7 @@ class MovieSerializer(serializers.ModelSerializer):
         model = Movie
         fields = ["id", "title", "subtitle", "director", "description"]
 
-class StreamingChannelSerializer(serializers.ModelSerializer):
+class PlatformSerializer(serializers.ModelSerializer):
     class Meta:
-        model = StreamingChannel
+        model = Platform
         fields = '__all__'

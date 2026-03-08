@@ -1,7 +1,7 @@
 import { HttpBackend, HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Movie } from '../../../../models/Movie';
-import { StremingChannel } from '../../../../models/StreamingChannel';
+import { StreamingChannel } from '../../../../models/StreamingChannel';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class MovieApi {
 
-  readonly API_URL: string = 'http://localhost:8000/api/v1/movies'
+  readonly API_URL: string = 'http://localhost:8000/api/v1'
   private http: HttpClient = inject(HttpClient)
 
   constructor() { }
@@ -22,9 +22,13 @@ export class MovieApi {
     return this.http.delete<Movie>(`${this.API_URL}/movies/${movieId}/`)
   }
 
-  getChannelList(): Observable<StremingChannel[]> {
-    return this.http.get<StremingChannel[]>(
-    `${this.API_URL}/movies/channels/`
+  getChannelList(): Observable<StreamingChannel[]> {
+    return this.http.get<StreamingChannel[]>(
+    `${this.API_URL}/channels/`
     )
+  }
+
+  addMovie(movie: Movie): Observable<Movie> {
+    return this.http.post<Movie>(`${this.API_URL}/movies/`, movie)
   }
 }

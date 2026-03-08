@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 
-from movies.models import Movie, StreamingChannel
-from movies.serializers import MovieSerializer, StreamingChannelSerializer
+from movies.models import Movie, Platform
+from movies.serializers import MovieSerializer, PlatformSerializer
 
 __all__ = [
     "MovieViewSet",
@@ -16,6 +16,6 @@ class MovieViewSet(viewsets.ModelViewSet):
     # def perform_create(self, serializer):
     #     serializer.save(owner=self.request.user)
 
-class StreamingChannelViewSet(viewsets.ModelViewSet):
-    queryset = StreamingChannel.objects.all()
-    serializer_class = StreamingChannelSerializer
+class PlatformViewSet(viewsets.ModelViewSet):
+    queryset = Platform.objects.all()
+    serializer_class = PlatformSerializer
